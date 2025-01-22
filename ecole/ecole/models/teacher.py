@@ -18,9 +18,9 @@ class Teacher(Person):
     - hiring_date     : date d'arrivée dans l'école
     - courses_teached : cours qu'il ou elle enseigne
     """
-    id: Optional[int] = field(default=None, init=False)
+    id: Optional[int] = field(default = None, init = False)
     hiring_date: date
-    courses_teached: list[Course] = field(default_factory=list, init=False)
+    courses_teached: list[Course] = field(default_factory = list, init = False)
 
     def add_course(self, course: Course) -> None:
         """Ajout du cours course à la liste des cours qu'il enseigne."""
